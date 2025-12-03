@@ -49,7 +49,7 @@ export const Navigation = () => {
       markersArray.push({
         position: [order.deliveryLocation.lat, order.deliveryLocation.lng] as [number, number],
         label: `Delivery: ${order.deliveryAddress}`,
-        color: '#ff8f00',
+        color: '#f08fa0',
       });
     }
 

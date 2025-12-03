@@ -101,7 +101,7 @@ export const Earnings = () => {
                     borderRadius: '8px',
                   }}
                 />
-                <Bar dataKey="earnings" fill="#ff8f00" radius={[8, 8, 0, 0]} />
+                <Bar dataKey="earnings" fill="#f08fa0" radius={[8, 8, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>

@@ -25,7 +25,7 @@ export const OrderCard = ({ order, onAccept, onReject, showActions = true }: Ord
   };
 
   const getStatusColor = () => {
-    if (isAccepted || isPicked) return 'text-orange-500';
+    if (isAccepted || isPicked) return 'text-primary';
     return 'text-muted-foreground';
   };
 
