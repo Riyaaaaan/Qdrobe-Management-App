@@ -24,6 +24,8 @@ export const Login = () => {
     formState: { errors },
   } = useForm<LoginFormData>({
     resolver: zodResolver(loginSchema),
+    mode: 'onTouched', // Only validate after user has interacted with the field
+    reValidateMode: 'onBlur', // Re-validate on blur after first validation
   });
 
   const onSubmit = (data: LoginFormData) => {

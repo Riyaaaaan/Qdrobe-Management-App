@@ -1,5 +1,4 @@
-import api from './api';
-import { ENDPOINTS } from './endpoints';
+import { locationData } from './mockData';
 
 export interface DriverLocation {
   driverId: string;
@@ -21,18 +20,18 @@ export interface UpdateLocationPayload {
 
 export const locationService = {
   updateDriverLocation: async (location: UpdateLocationPayload): Promise<DriverLocation> => {
-    const response = await api.post<DriverLocation>(ENDPOINTS.LOCATION.UPDATE_DRIVER, location);
-    return response.data;
+    const driverId = "1"; // In real app, get from auth context
+    return locationData.updateDriverLocation(driverId, location);
   },
 
   getDriverLocation: async (driverId: string): Promise<DriverLocation> => {
-    const response = await api.get<DriverLocation>(ENDPOINTS.LOCATION.GET_DRIVER(driverId));
-    return response.data;
+    return locationData.getDriverLocation(driverId);
   },
 
   getOrderLocation: async (orderId: string): Promise<DriverLocation | null> => {
-    const response = await api.get<DriverLocation | null>(ENDPOINTS.LOCATION.GET_ORDER(orderId));
-    return response.data;
+    return locationData.getOrderLocation(orderId);
   },
 };
+
+
 

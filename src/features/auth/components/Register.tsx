@@ -28,6 +28,8 @@ export const Register = () => {
     formState: { errors },
   } = useForm<RegisterFormData>({
     resolver: zodResolver(registerSchema),
+    mode: 'onTouched', // Only validate after user has interacted with the field
+    reValidateMode: 'onBlur', // Re-validate on blur after first validation
   });
 
   const onSubmit = (data: RegisterFormData) => {

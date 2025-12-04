@@ -35,6 +35,8 @@ export const Profile = () => {
   } = useForm<ProfileFormData>({
     resolver: zodResolver(profileSchema),
     defaultValues: profile || user || {},
+    mode: 'onTouched', // Only validate after user has interacted with the field
+    reValidateMode: 'onBlur', // Re-validate on blur after first validation
   });
 
   React.useEffect(() => {

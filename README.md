@@ -24,7 +24,6 @@ A comprehensive Progressive Web App (PWA) for delivery drivers, similar to Zomat
 - **Build Tool**: Vite
 - **PWA**: Vite PWA Plugin
 - **Form Handling**: React Hook Form + Zod validation
-- **Mock API**: JSON Server
 
 ## Project Structure
 
@@ -61,19 +60,14 @@ src/
 npm install
 ```
 
-2. Start the mock API server (in a separate terminal):
-```bash
-npm run mock-api
-```
-
-3. Start the development server:
+2. Start the development server:
 ```bash
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-### Mock API Credentials
+### Default Credentials
 
 - Email: `driver@example.com`
 - Password: `password123`
@@ -83,7 +77,6 @@ npm run dev
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
-- `npm run mock-api` - Start JSON Server mock API
 
 ## Features in Detail
 
